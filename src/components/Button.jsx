@@ -13,7 +13,7 @@ const Button = (props) => {
             <VscArrowRight />
           </span>
         </span>
-        <span className="capitalize group-hover:translate-x-[-30%] bg-[#222222] transition-all duration-500 ease-in-out">
+        <span className="capitalize whitespace-nowrap font-semibold text-base group-hover:translate-x-[-30%] bg-[#222222] transition-all duration-500 ease-in-out">
           {props.text ? props.text : "just button"}
         </span>
         <span className="absolute right-5 flex justify-center items-center overflow-hidden">
