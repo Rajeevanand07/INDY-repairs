@@ -64,10 +64,9 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className="lg:hidden h-[100vh] w-[50vw] absolute top-0 right-0 border-2 z-[8] flex justify-center items-center flex-col gap-10 transition-all duration-500 ease-in-out"
-        style={{
-          transform: isOpen ? "translateX(0%)" : "translateX(100%)",
-        }}
+        className={`lg:hidden h-[100vh] w-[50vw] fixed top-0 right-0 border-2 z-[8] flex justify-center items-center flex-col gap-10 transition-all duration-500 ease-in-out bg-white ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
       >
         <ul className="flex gap-7 justify-center items-center flex-col font-semibold uppercase text-2xl lg:hidden ">
           <a
