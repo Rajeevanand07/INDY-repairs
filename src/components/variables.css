@@ -1,0 +1,8 @@
+:root {
+    --color-red: #E81C2E; /*write red to use*/
+    --color-black: #222222; /*write black to use */
+    --color-white: #ffffff; /*write white to use*/
+    --color-white-2: #f5f5f5;/*write white2 to use*/
+    --color-gray: #282828;/*write gray to use*/
+    --red-gradient: linear-gradient(to bottom, #FE838D, #E92133);/*write red-gradient to use*/
+}

@@ -1,8 +1,8 @@
 import image from "../../public/logo.png";
-import Button from "./Button";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
+import ButtonBlack from "./ButtonBlack";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,25 +21,25 @@ const Navbar = () => {
           </div>
           <ul className="flex gap-14 justify-center items-center font-semibold uppercase text-sm max-lg:hidden ">
             <a
-              className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+              className="hover:text-red transition-all duration-500 ease-in-out"
               href="#"
             >
               Home
             </a>
             <a
-              className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+              className="hover:text-red transition-all duration-500 ease-in-out"
               href="#"
             >
               About
             </a>
             <a
-              className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+              className="hover:text-red transition-all duration-500 ease-in-out"
               href="#"
             >
               Services
             </a>
             <a
-              className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+              className="hover:text-red transition-all duration-500 ease-in-out"
               href="#"
             >
               FAQ
@@ -47,10 +47,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-6 items-center max-lg:hidden">
-          <span className="whitespace-nowrap text-[#E81C2E] font-semibold cursor-pointer hover:text-[#222222] transition-all duration-500 ease-in-out">
+          <span className="whitespace-nowrap text-red font-semibold cursor-pointer hover:text-black transition-all duration-500 ease-in-out">
             +1 (317) 313-0713
           </span>
-          <Button text={"contact us"} />
+          <ButtonBlack text={"contact us"} />
         </div>
         <div
           className="lg:hidden relative z-[9]"
@@ -70,31 +70,31 @@ const Navbar = () => {
       >
         <ul className="flex gap-7 justify-center items-center flex-col font-semibold uppercase text-2xl lg:hidden ">
           <a
-            className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+            className="hover:text-red transition-all duration-500 ease-in-out"
             href="#"
           >
             Home
           </a>
           <a
-            className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+            className="hover:text-red transition-all duration-500 ease-in-out"
             href="#"
           >
             About
           </a>
           <a
-            className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+            className="hover:text-red transition-all duration-500 ease-in-out"
             href="#"
           >
             Services
           </a>
           <a
-            className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+            className="hover:text-red transition-all duration-500 ease-in-out"
             href="#"
           >
             Contact
           </a>
           <a
-            className="hover:text-[#E81C2E] transition-all duration-500 ease-in-out"
+            className="hover:text-red transition-all duration-500 ease-in-out"
             href="#"
           >
             FAQ
