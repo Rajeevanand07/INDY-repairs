@@ -14,7 +14,9 @@ module.exports = {
         black: 'var(--color-black)',
         white: 'var(--color-white)',
         white2: 'var(--color-white-2)',
-        gray: 'var(--color-gray)',
+        gray: {
+          100: 'var(--color-gray-100)',
+        },
       },
       backgroundImage: {
         'red-gradient': 'var(--red-gradient)',
