@@ -3,7 +3,7 @@ import { VscArrowRight } from "react-icons/vsc";
 
 const ButtonWhite = (props) => {
   return (
-    <div className="flex items-center h-full w-full gap-3">
+    <div className="flex">
       <a
         href="#"
         className="group relative flex justify-center items-center gap-3 rounded-lg bg-white px-6 py-3 font-semibold text-sm text-white transition-all duration-300 ease-in-out"
