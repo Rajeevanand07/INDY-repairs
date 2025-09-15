@@ -38,7 +38,7 @@ const questions = [
 const Footer = () => {
   return (
     <footer className="bg-black pt-[8%] px-[8%] text-gray-100 overflow-y-hidden">
-      <div className="mb-20 flex flex-col justify-center items-start gap-[3rem] lg:flex-row lg:items-center">
+      <div className="mb-20 flex flex-col justify-between items-start gap-[3rem] lg:flex-row lg:items-center">
         <h1 className="text-4xl md:text-5xl font-semibold text-white2 tracking-tight text-left max-w-2xl">
           Get every single updates weekly from us.
         </h1>
