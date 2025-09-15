@@ -4,7 +4,7 @@ import { VscArrowRight } from "react-icons/vsc";
 const ButtonRed = ({ text = "just button", arrow, className = "", ...props }) => {
 
   return (
-    <div className={`flex justify-center items-center h-full w-full ${className}`}>
+    <div className={`flex items-center h-full w-full ${className}`}>
       <a
         href="#"
         className="group relative flex justify-center items-center gap-3 w-full rounded-lg bg-red-gradient px-6 py-3 font-semibold text-sm text-white transition-all duration-300 ease-in-out"
@@ -15,7 +15,7 @@ const ButtonRed = ({ text = "just button", arrow, className = "", ...props }) =>
             <VscArrowRight />
           </span>
         </span>
-        <span className="capitalize whitespace-nowrap font-semibold text-base group-hover:translate-x-[-30%] bg-transparent transition-all duration-500 ease-in-out">
+        <span className="capitalize whitespace-nowrap font-semibold text-md group-hover:translate-x-[-30%] bg-transparent transition-all duration-500 ease-in-out">
           {text}
         </span>
         <span
