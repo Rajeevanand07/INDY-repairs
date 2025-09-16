@@ -10,8 +10,8 @@ const BannerSection = () => {
 
   return (
     <section className="flex flex-col items-center justify-center gap-10 lg:gap-20 overflow-hidden py-16 pb-8 w-full h-min">
-      <div className="relative flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16  h-min max-w-[1200px] w-full mx-auto px-4 md:px-6">
-        <h1 className="font-inter font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-[#222222] text-left">
+      <div className="relative flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16  h-min w-full px-[8%]">
+        <h1 className="font-inter font-bold text-6xl sm:text-5xl lg:text-6xl leading-tight text-[#222222] text-left">
           {currentData?.heading}
         </h1>
 

@@ -1,17 +1,22 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import BannerSection from "../components/BannerSection";
 import servicesData from "../data/servicesData";
 
 const ServiceDetail = () => {
     const { slug } = useParams();
+    const { pathname } = useLocation();
     const service = servicesData.find(
         (s) => s.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") === slug
     );
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth" // Optional: adds smooth scrolling
+        });
+    }, [pathname]); // Added slug as dependency to scroll to top when service changes
 
     if (!service)
         return (

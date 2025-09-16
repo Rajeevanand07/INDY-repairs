@@ -152,7 +152,7 @@ const Home = () => {
             <img
               className="h-full w-full object-cover"
               src={exp_img_home}
-              alt=""
+              alt="home image"
             />
           </div>
         </div>

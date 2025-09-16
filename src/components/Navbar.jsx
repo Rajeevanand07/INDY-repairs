@@ -3,6 +3,7 @@ import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import ButtonBlack from "./ButtonBlack";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,24 +21,24 @@ const Navbar = () => {
             <img className="h-full w-full" src={image} alt="logo" />
           </div>
           <ul className="flex gap-14 justify-center items-center font-semibold uppercase text-sm max-lg:hidden ">
-            <a
+            <Link
               className="hover:text-red transition-all duration-500 ease-in-out"
-              href="#"
+              to="/"
             >
               Home
-            </a>
+            </Link>
             <a
               className="hover:text-red transition-all duration-500 ease-in-out"
               href="#"
             >
               About
             </a>
-            <a
+            <Link
               className="hover:text-red transition-all duration-500 ease-in-out"
-              href="#"
+              to="/services"
             >
               Services
-            </a>
+            </Link>
             <a
               className="hover:text-red transition-all duration-500 ease-in-out"
               href="#"
