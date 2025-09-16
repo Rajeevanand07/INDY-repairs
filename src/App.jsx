@@ -2,15 +2,17 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import BannerSection from './components/BannerSection'
 import Services from './Pages/Services';
+import ServiceDetail from './Pages/ServiceDetail';
 
 const App = () => {
   return (
     <>
-        <Routes>
+      <Routes>
 
-      <Route path="/services" element={<Services/>} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/service/:slug" element={<ServiceDetail/>} />
 
-    </Routes>
+      </Routes>
 
     </>
   )
