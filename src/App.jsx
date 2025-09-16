@@ -1,22 +1,24 @@
 import './App.css'
-import { Routes, Route } from "react-router-dom";
-import BannerSection from './components/BannerSection'
-import Services from './Pages/Services';
-import ServiceDetail from './Pages/ServiceDetail';
-import Home from './pages/Home';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import About from './pages/About'
+import NotFound from './pages/NotFound'
+import Services from './pages/Services'
+import ServiceDetail from './pages/ServiceDetail'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 const App = () => {
   return (
     <>
-    <Navbar/>
+    <Router>
+      <Navbar/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/service/:slug" element={<ServiceDetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-    <Footer/>
+      <Footer/>
+    </Router>
     </>
   )
 }
