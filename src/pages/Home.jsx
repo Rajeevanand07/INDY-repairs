@@ -7,11 +7,18 @@ import exp_img_home from "../../public/exp_img_home.jpg";
 import Tag from "../components/Tag";
 import { IoIosCheckmark } from "react-icons/io";
 import ButtonBlack from "../components/ButtonBlack";
+import ButtonWhite from "../components/ButtonWhite";
+import ButtonRed from "../components/ButtonRed";
 import exp_1 from "../../public/exp_1.jpg";
 import exp_2 from "../../public/exp_2.jpg";
 import exp_3 from "../../public/exp_3.jpg";
 import exp_4 from "../../public/exp_4.jpg";
 import RotatingBadge from "../components/RotatingBadge";
+import HowWork from "../components/HowWork";
+import about_us_img1 from "../../public/about_us_img1.jpg";
+import about_us_img2 from "../../public/about_us_img2.jpg";
+import aim from "../../public/aim.svg";
+import rocket from "../../public/rocket.svg";
 
 const experience_tags = [
   {
@@ -91,13 +98,15 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-col justify-center items-center overflow-hidden mt-16">
-          <div className="relative w-[100%] pb-20 rounded-2xl overflow-hidden">
+          <div className="relative h-[70vw] md:h-[100%] w-[100%] pb-20 rounded-2xl overflow-hidden">
             <img
               className="w-full h-full object-cover rounded-2xl"
               src={home_main_img}
               alt=""
             />
-          <div className="absolute left-[50%] translate-x-[-50%] bottom-0"><RotatingBadge /></div>
+            <div className="absolute left-[50%] translate-x-[-50%] bottom-0">
+              <RotatingBadge />
+            </div>
           </div>
         </div>
       </section>
@@ -157,10 +166,37 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
-        
+      <section className="bg-black">
+        <section className="p-[8%] py-[10%] lg:p-[5%] text-white flex flex-col gap-6 md:gap-12 md:flex-row">
+          <div className="flex flex-col-reverse items-center justify-end lg:flex-row lg:gap-10 ">
+            <div className="hidden lg:block w-[100%] lg:h-[33vw] overflow-hidden rounded-xl"><img className="w-full h-full object-cover" src={about_us_img1} alt="about1" /></div>
+            <div className="flex flex-col gap-6 ">
+              <span><Tag text={"about us"} /></span>
+              <h2 className="text-4xl leading-tight font-semibold mb-3 md:text-5xl">Our America's #1 Truck and Trailer Repair Company</h2>
+              <p className="text-gray-100">At INDY repair, we recognize that your truck is more than just a vehicle. It’s your daily work partner, your road companion, and a reflection of your commitment to getting the job done.</p>
+              <span className="flex justify-start items-center"><ButtonRed text="learn more" /></span>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex justify-between items-center gap-12 p-6 border-b-[1px] border-gray-100">
+              <span className="flex flex-col gap-2 ">
+                  <h4 className="text-2xl font-semibold">Our mission</h4>
+                  <p className="text-gray-100 text-sm">have focused generating new known is a ledge.</p>
+              </span>
+              <span className="w-[20vw] md:w-[10vw]"><img className="w-full h-full object-cover" src={aim} alt="" /></span>
+            </div>
+            <div className="flex justify-between items-center gap-12 p-6 mb-6 md:mb-0">
+              <span className="flex flex-col gap-2 ">
+                  <h4 className="text-2xl font-semibold">Our vision</h4>
+                  <p className="text-gray-100 text-sm">Concentration while creating new knowledge is an edge.</p>
+              </span>
+              <span className="w-[20vw] md:w-[10vw]"><img className="w-full h-full object-cover" src={rocket} alt="" /></span>
+            </div>
+            <div className="w-full h-[50vw] overflow-hidden rounded-xl md:h-[15vw]"><img className="w-full h-full object-cover" src={about_us_img2} alt="about2" /></div>
+          </div>
+        </section>
       </section>
-      <section className="p-[8%] flex flex-col gap-10 lg:flex-row">
+      <section className="p-[8%] py-[5%] flex flex-col gap-10 lg:flex-row">
         <div className="flex flex-col gap-4 min-w-[40%]">
           <div>
             <Tag text={"our experties"} />
@@ -212,6 +248,50 @@ const Home = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="p-[8%] py-[5%] bg-[#F5F5F5] flex flex-col gap-14">
+        <HowWork />
+        <div className="p-[5%] pb-[10%] lg:p-[3%] flex flex-col lg:flex-row gap-10 bg-white rounded-xl">
+          <div className="pt-[10%] lg:pt-[5%]">
+            <Tag text="why choose us" />
+            <h1 className="text-4xl font-semibold my-6 leading-[1.2]">
+              We are the best option for complete truck care
+            </h1>
+            <p className="text-gray-100 mb-6">
+              At INDY repair, we understand that your truck is more than just a
+              vehicle. It’s your trusted companion, the partner that keeps your
+              business moving forward.
+            </p>
+            <div className="flex flex-col gap-3 items-start">
+              <span className="flex justify-start items-start gap-3">
+                <span className="border-[1px] border-[#dddddd] rounded-[100%] text-red text-2xl">
+                  <IoIosCheckmark />
+                </span>
+                <p>We handle your truck like it’s our own.</p>
+              </span>
+              <span className="flex justify-center items-center gap-3">
+                <span className="border-[1px] border-[#dddddd] rounded-[100%] text-red text-2xl">
+                  <IoIosCheckmark />
+                </span>
+                <p>Skilled professionals ensure top performance.</p>
+              </span>
+              <span className="flex justify-center items-center gap-3">
+                <span className="border-[1px] border-[#dddddd] rounded-[100%] text-red text-2xl">
+                  <IoIosCheckmark />
+                </span>
+                <p>Fast, thorough, and hassle-free care.</p>
+              </span>
+            </div>
+          </div>
+          <div className="w-full h-[80vw] md:h-[40vw] relative overflow-hidden rounded-xl">
+            <img
+              className="w-full h-full object-cover"
+              src={exp_img_home}
+              alt="why choose us image"
+            />{" "}
+            <div className="absolute bottom-5 left-5"><ButtonWhite text="contact us" />{" "}</div>
+          </div>
         </div>
       </section>
     </main>
