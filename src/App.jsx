@@ -1,12 +1,13 @@
 import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import Home from './pages/Home'
 
 const App = () => {
   return (
     <>
         <Navbar/>
-        <div className="h-[100vh]">see variables.css for colors and use that colors (inside components)</div>
+        <Home/> 
         <Footer/>
     </>
   )
