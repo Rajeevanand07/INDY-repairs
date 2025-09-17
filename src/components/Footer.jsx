@@ -1,7 +1,7 @@
 import React from "react";
-import ButtonRed from "./ButtonRed";
+import Button from "./Button";
 import { GoMail } from "react-icons/go";
-import logo_white from "../../public/logo_white.png"
+import logo_white from "/home/logo_white.png"
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -53,7 +53,7 @@ const Footer = () => {
               />
             </div>
             <div className="w-full sm:w-auto">
-              <ButtonRed text="Subscribe" arrow={true} className="w-full" />
+              <Button text="Subscribe" variant="red" arrow={true} className="w-full" />
             </div>
           </div>
         </form>

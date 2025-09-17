@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import Tag from "../components/Tag";
 // Motion-enabled Link
 const MotionLink = motion(Link);
 
 const HowWork = () => {
   return (
-    <div className="max-w-[1500px] relative w-full mx-auto">
+    <div className="relative w-full flex flex-col max-md:items-center">
       <div className="text-center mb-16">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-inter font-medium text-[12px] leading-[12px] text-[#222222] uppercase border-[1px] border-[#EB3746] rounded-[10rem] px-2.5 py-[0.2rem]"
+        //   className="font-inter font-medium text-[12px] leading-[12px] text-[#222222] uppercase border-[1px] border-[#EB3746] rounded-[10rem] px-2.5 py-[0.2rem]"
         >
-          How it works
+          <Tag text={"how it works"} />
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ const HowWork = () => {
       </div>
 
       {/* Steps + Arrows */}
-      <div className="flex flex-col lg:flex-row items-center gap-28 lg:gap-10 h-min justify-center relative">
+      <div className="flex flex-col items-stretch max-sm:w-[70%] max-sm:gap-10 max-md:w-[50%] md:flex-row lg:flex-row gap-28 lg:gap-10 h-min justify-center relative">
         {/* Card 1 */}
         <MotionLink
           initial={{ opacity: 0, y: 50 }}
@@ -37,7 +37,7 @@ const HowWork = () => {
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
           to="/contact"
-          className="group flex flex-col items-center gap-12 relative cursor-pointer no-underline"
+          className="group flex flex-col items-center justify-between gap-12 relative cursor-pointer no-underline"
         >
           <div className="bg-white w-28 h-28 rounded-full flex items-center justify-center">
             <img
@@ -50,14 +50,15 @@ const HowWork = () => {
             <h3 className="font-inter font-semibold text-[20px] text-[#222222]">
               Bring your truck here
             </h3>
-            <p className="font-inter text-[14px] px-16 text-[#666666]">
+            <p className="font-inter text-[14px] lg:px-16 text-[#666666]">
               Drive to our service point or schedule a pick-up we’ll take care
               of the rest.
             </p>
+            <p className="font-inter text-red lg:text-[#c9c8c8] uppercase font-semibold text-[14px] group-hover:text-[#e81c2e] transition-colors duration-300">
+                contact us
+            </p>
           </div>
-          <p className="font-inter uppercase font-semibold text-[14px] text-[#c9c8c8] group-hover:text-[#e81c2e] transition-colors duration-300">
-            contact us
-          </p>
+          
         </MotionLink>
 
         {/* Arrow 1 - show only on desktop */}
@@ -76,7 +77,7 @@ const HowWork = () => {
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
           to="/contact"
-          className="group flex flex-col items-center gap-12 relative cursor-pointer no-underline"
+          className="group flex flex-col items-center justify-between gap-12 relative cursor-pointer no-underline"
         >
           <div className="bg-white w-28 h-28 rounded-full flex items-center justify-center">
             <img
@@ -89,18 +90,18 @@ const HowWork = () => {
             <h3 className="font-inter font-semibold text-[20px] text-[#222222]">
               Get an inspection
             </h3>
-            <p className="font-inter text-[14px] px-16 text-[#666666]">
+            <p className="font-inter text-[14px] lg:px-16 text-[#666666]">
               Our experts check your truck thoroughly and provide a detailed
               report of issues.
             </p>
+            <p className="font-inter text-red lg:text-[#c9c8c8] uppercase font-semibold text-[14px] text-[#c9c8c8] group-hover:text-[#e81c2e] transition-colors duration-300">
+                contact us
+            </p>
           </div>
-          <p className="font-inter uppercase font-semibold text-[14px] text-[#c9c8c8] group-hover:text-[#e81c2e] transition-colors duration-300">
-            contact us
-          </p>
         </MotionLink>
 
         {/* Arrow 2 - show only on desktop */}
-        <div className="hidden lg:block absolute top-16 right-[30%]">
+        <div className="hidden lg:block absolute top-16 right-[25%]">
           <img
             src="/services/arrow2.svg"
             alt="Arrow"
@@ -115,7 +116,7 @@ const HowWork = () => {
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
           to="/contact"
-          className="group flex flex-col items-center gap-12 relative cursor-pointer no-underline"
+          className="group flex flex-col justify-between items-center gap-12 relative cursor-pointer no-underline"
         >
           <div className="bg-white w-28 h-28 rounded-full flex items-center justify-center">
             <img
@@ -128,14 +129,14 @@ const HowWork = () => {
             <h3 className="font-inter font-semibold  text-[20px] text-[#222222]">
               Get solid solution
             </h3>
-            <p className="font-inter text-[14px] px-16 text-[#666666]">
+            <p className="font-inter text-[14px] lg:px-16 text-[#666666]">
               Receive professional repair or service tailored to keep your truck
               running smoothly.
             </p>
+            <p className="font-inter text-red lg:text-[#c9c8c8] uppercase font-semibold text-[14px] text-[#c9c8c8] group-hover:text-[#e81c2e] transition-colors duration-300">
+                contact us
+            </p>
           </div>
-          <p className="font-inter uppercase font-semibold text-[14px] text-[#c9c8c8] group-hover:text-[#e81c2e] transition-colors duration-300">
-            contact us
-          </p>
         </MotionLink>
       </div>
     </div>
