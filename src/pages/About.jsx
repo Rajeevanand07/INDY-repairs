@@ -1,8 +1,7 @@
 import React from 'react';
 import Tag from '../components/Tag';
-import ButtonBlack from '../components/ButtonBlack';
+import Button from '../components/Button';
 import StatsSection from '../components/StateSection';
-import ButtonRed from '../components/ButtonRed';
 
 export default function About() {
   const timeline = [
@@ -79,7 +78,7 @@ export default function About() {
                 </p>
               </div>
               <div className="w-full flex justify-center md:justify-start">
-                <ButtonRed text="Learn More" />
+                <Button text="Learn More" />
               </div>
             </div>
           </div>
@@ -132,7 +131,7 @@ export default function About() {
           <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
             Our team of certified professionals is dedicated to providing the highest quality service. We are passionate about what we do and committed to your satisfaction.
           </p>
-          <ButtonBlack text="Join with us" />
+          <Button text="Join with us" />
         </div>
 
         {/* Right Block: Team Cards (Larger and positioned below/right on Desktop) */}

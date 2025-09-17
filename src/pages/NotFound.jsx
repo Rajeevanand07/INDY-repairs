@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonRed from '../components/ButtonRed'
+import Button from '../components/Button'
 const NotFound = () => {
   return (
     <div className='relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-white'>      
@@ -11,7 +11,7 @@ const NotFound = () => {
         <p className='text-[16px] font-semibold text-[#7A7A7A] mb-8 max-w-md'>
           Sorry, the page you are looking for does not exist.
         </p>
-        <ButtonRed text="Go Back Home" />
+        <Button text="Go Back Home" />
       </div>
     </div>
   )

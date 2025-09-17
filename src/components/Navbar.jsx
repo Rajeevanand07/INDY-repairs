@@ -3,6 +3,7 @@ import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,24 +27,24 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <a
+            <Link
               className="hover:text-red transition-all duration-500 ease-in-out"
-              href="#"
+              to="/about"
             >
               About
-            </a>
+            </Link>
             <Link
               className="hover:text-red transition-all duration-500 ease-in-out"
               to="/services"
             >
               Services
             </Link>
-            <a
+            <Link
               className="hover:text-red transition-all duration-500 ease-in-out"
-              href="#"
+              to="/faq"
             >
               FAQ
-            </a>
+            </Link>
           </ul>
         </div>
         <div className="flex gap-6 items-center max-lg:hidden">
