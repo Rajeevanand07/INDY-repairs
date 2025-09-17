@@ -1,8 +1,8 @@
-import image from "../../public/logo.png";
+import image from "/home/logo.png";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
-import ButtonBlack from "./ButtonBlack";
+import Button from "./Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,7 @@ const Navbar = () => {
           <span className="whitespace-nowrap text-red font-semibold cursor-pointer hover:text-black transition-all duration-500 ease-in-out">
             +1 (317) 313-0713
           </span>
-          <ButtonBlack text={"contact us"} />
+          <Button variant="black" text={"contact us"} />
         </div>
         <div
           className="lg:hidden relative z-[9]"
