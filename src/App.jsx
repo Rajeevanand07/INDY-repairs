@@ -5,11 +5,10 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 const App = () => {
   return (
     <>
-    <Router>
       <Navbar/>
       <Routes>
         <Route path="/" element={<About />} />
@@ -18,7 +17,6 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
-    </Router>
     </>
   )
 }
