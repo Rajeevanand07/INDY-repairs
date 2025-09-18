@@ -23,7 +23,8 @@ const images = {
   about_us_img1: "/home/about_us_img1.jpg",
   about_us_img2: "/home/about_us_img2.jpg",
   aim: "/home/aim.svg",
-  rocket: "/home/rocket.svg"
+  rocket: "/home/rocket.svg",
+  contact_home: "/home/contact_home.webp",
 };
 
 // Minimal, reusable fade-up animation config
@@ -333,8 +334,8 @@ const Home = () => {
           </motion.div>
           <motion.div className="w-full h-[80vw] md:h-[40vw] relative overflow-hidden rounded-xl" {...fadeUp}>
             <img
-              className="w-full h-full object-cover"
-              src={images.exp_img_home}
+              className="w-full h-full object-cover position-center"
+              src={images.contact_home}
               alt="why choose us image"
             />{" "}
             <div className="absolute bottom-5 left-5"><Button to="/contact" variant="white" text="contact us" /></div>

@@ -2,9 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { VscArrowRight } from "react-icons/vsc";
 import { toast } from "react-toastify";
-
-
-import { FiPhoneCall } from "react-icons/fi";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const ContactForm = () => {
   const form = useRef();
@@ -204,7 +202,7 @@ const ContactForm = () => {
                 className="group relative flex justify-center items-center gap-3 rounded-lg bg-black px-6 py-3 font-semibold text-sm text-white transition-all duration-300 ease-in-out"
               >
                 <span className="flex justify-center items-center overflow-hidden">
-                  <span className="scale-110 flex text-white left-4 transition-all duration-500 ease-in-out group-hover:translate-x-[100%]">
+                  <span className="scale-110 flex text-red left-4 transition-all duration-500 ease-in-out group-hover:translate-x-[100%]">
                     <VscArrowRight />
                   </span>
                 </span>
@@ -212,7 +210,7 @@ const ContactForm = () => {
                   {loading ? "Sending" : "Submit"}
                 </span>
                 <span className="absolute right-5 flex justify-center items-center overflow-hidden">
-                  <span className="translate-x-[-100%] scale-110 flex text-white left-4 transition-all duration-500 ease-in-out group-hover:translate-x-0">
+                  <span className="translate-x-[-100%] scale-110 flex text-red left-4 transition-all duration-500 ease-in-out group-hover:translate-x-0">
                     <VscArrowRight />
                   </span>
                 </span>
@@ -228,7 +226,7 @@ const ContactForm = () => {
             <img
               src="/contact/formImg1.avif"
               alt="Truck servicing"
-              className="absolute inset-0 opacity-40 w-full h-full object-cover rounded-lg"
+              className="absolute inset-0 opacity-80 w-full h-full object-cover rounded-lg"
             />
             <div className="relative z-10 p-6 py-12 flex flex-col justify-start gap-5 h-full">
               <h2 className="text-[18px] xl:text-[26px] font-semibold flex flex-col gap-1 text-white mb-2 xl:mb-4">
@@ -236,20 +234,20 @@ const ContactForm = () => {
                 <span className="text-[16px] xl:text-[24px]">Contact us now!</span>
               </h2>
               <a
-                href="tel:+13173130713"
-                className="group relative flex items-center gap-3 rounded-lg bg-red-gradient px-6 py-3 font-semibold text-sm text-white transition-all duration-300 ease-in-out w-60"
+                href="tel:317-771-5095"
+                className="group relative flex items-center justify-center gap-3 rounded-lg bg-red-gradient px-6 py-3 font-semibold text-sm text-white transition-all duration-300 ease-in-out w-60"
               >
                 <span className="flex justify-center items-center overflow-hidden">
                   <span className="scale-110 flex text-white left-4 transition-all duration-500 ease-in-out group-hover:translate-x-[100%]">
-                    <FiPhoneCall />
+                    <FaPhoneAlt />
                   </span>
                 </span>
                 <span className="capitalize whitespace-nowrap font-semibold text-base group-hover:translate-x-[-30%] bg-transparent transition-all duration-500 ease-in-out">
-                  +1 (317) 313-0713
+                317-771-5095
                 </span>
                 <span className="absolute right-5 flex justify-center items-center overflow-hidden">
                   <span className="translate-x-[-100%] scale-110 flex text-white left-4 transition-all duration-500 ease-in-out group-hover:translate-x-0">
-                    <FiPhoneCall />
+                    <FaPhoneAlt />
                   </span>
                 </span>
               </a>
