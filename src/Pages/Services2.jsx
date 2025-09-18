@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import BannerSection from "../components/BannerSection";
 import servicesData from "../data/servicesData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HowWork from "../components/HowWork";
 import Button from "../components/Button"; // Import the Button component
+import BannerSection from "../components/BannerSection";
 
 // Minimal, reusable fade-up animation config
 const fadeUp = {
@@ -14,7 +14,7 @@ const fadeUp = {
   viewport: { once: true, amount: 0.01 }
 };
 
-const Services = () => {
+const Services2 = () => {
   const [showAll, setShowAll] = useState(false);
 
   // Decide which services to display
@@ -132,4 +132,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Services2;

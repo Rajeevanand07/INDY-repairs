@@ -3,7 +3,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import BannerSection from "../components/BannerSection";
 import servicesData from "../data/servicesData";
 
-const ServiceDetail = () => {
+const ServiceDetails = () => {
     const { slug } = useParams();
     const { pathname } = useLocation();
     const service = servicesData.find(
@@ -75,4 +75,4 @@ const ServiceDetail = () => {
     );
 };
 
-export default ServiceDetail;
+export default ServiceDetails;

@@ -1,15 +1,15 @@
 import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import NotFound from './pages/NotFound'
-import Services from './pages/Services'
-import ServiceDetail from './pages/ServiceDetail'
-import FAQ from './pages/FAQ'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import Home2 from './pages/Home2'
 import About2 from './pages/About2'
+import Services2 from './pages/Services2'
+import Home2 from './pages/Home2'
+import ServiceDetails from './pages/ServiceDetails'
 import Contact from './pages/Contact'
+import FAQs from './pages/FAQs'
+import NotFound2 from './pages/NotFound2'
 
 
 
@@ -49,11 +49,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home2 />} />
         <Route path="/about" element={<About2 />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/service/:slug" element={<ServiceDetail />} />
+        <Route path="/services" element={<Services2 />} />
+        <Route path="/service/:slug" element={<ServiceDetails />} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/faq" element={<FAQ/>} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/faq" element={<FAQs/>} />
+        <Route path="*" element={<NotFound2 />} />
       </Routes>
       <Footer/>
     </>
