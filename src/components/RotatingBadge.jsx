@@ -46,7 +46,7 @@ const RotatingBadge = ({ size = 150, duration = "14s" }) => {
 
                 {/* Wrench icon in center */}
                 <g transform="translate(100,100) translate(-50,-50)">
-                    <image href="/Wrench.svg" width="100" height="100" />
+                    <image href="/home/Wrench.svg" width="100" height="100" />
                 </g>
             </svg>
         </div>

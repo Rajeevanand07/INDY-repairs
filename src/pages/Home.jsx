@@ -4,6 +4,9 @@ import Tag from "../components/Tag";
 import Button from "../components/Button";
 import RotatingBadge from "../components/RotatingBadge";
 import HowWork from "../components/HowWork";
+import { motion } from "framer-motion";
+import StatsSection from "../components/StateSection";
+import { Link } from "react-router-dom";
 
 // Import all images from the public/home directory
 const images = {
@@ -20,6 +23,14 @@ const images = {
   about_us_img2: "/home/about_us_img2.jpg",
   aim: "/home/aim.svg",
   rocket: "/home/rocket.svg"
+};
+
+// Minimal, reusable fade-up animation config
+const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, ease: "easeOut" },
+  viewport: { once: true, amount: 0.01 }
 };
 
 const experience_tags = [
@@ -48,28 +59,32 @@ const experties_tags = [
 
 const experties_cards = [
   {
-    img: images.exp_1,
-    heading: "full truck inspection",
+    img: "/services/inspection.webp",
+    heading: "Full Vehicle Inspection",
+    slug:"full-vehicle-inspection",
     description:
-      "Engine is the heart of truck, and any issues can effect performance.",
+      "Comprehensive inspection of your truck to detect issues early and ensure reliability.",
   },
   {
-    img: images.exp_4,
-    heading: "truck trailer bushing",
+    img: "/services/diagnostics.webp",
+    heading: "Engine Diagnostics",
+    slug:"engine-diagnostics",
     description:
-      "High-quality truck trailer bushings for smoother rides on highways.",
+      "Advanced diagnostics to detect and resolve hidden engine performance issues.",
   },
   {
-    img: images.exp_3,
+    img: "/services/compressor.webp",
     heading: "air compressor",
+    slug:"air-compressor-repair",
     description:
-      "Efficient air compressor solutions for trucks, ensuring consistent pressure and reliable operation.",
+      "Essential air compressor maintenance for brakes, suspension, and accessories.",
   },
   {
-    img: images.exp_1,
+    img: "/services/transmission.webp",
     heading: "transmission change ",
+    slug:"transmission-change",
     description:
-      "Reliable transmission change services for smoother shifting and optimal truck performance.",
+      "Heavy-duty transmission service and replacement for smooth gear shifting.",
   },
 ];
 
@@ -85,22 +100,30 @@ const Home = () => {
               alt=""
             />
           </span>
-          <h1 className="text-6xl uppercase tracking-tighter text-black font-semibold max-sm:text-5xl lg:text-8xl xl:text-9xl">
+          <motion.h1
+            className="text-6xl uppercase tracking-tighter text-black font-semibold max-sm:text-5xl lg:text-8xl xl:text-9xl"
+          >
             truck repair
-          </h1>
+          </motion.h1>
         </div>
         <div className="flex flex-col justify-start items-start gap-5 lg:flex-row-reverse lg:justify-between lg:items-center">
-          <h1 className="text-6xl whitespace-nowrap text-right uppercase tracking-tighter font-semibold text-red max-sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl ">
+          <motion.h1
+            className="text-6xl whitespace-nowrap text-right uppercase tracking-tighter font-semibold text-red max-sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl "
+          >
             <span className="text-black"> & </span>servicing
-          </h1>
-          <p className="text-md text-[#727272] md:text-left md:w-[50%] lg:w-[40%]">
+          </motion.h1>
+          <motion.p
+            className="text-md text-[#727272] md:text-left md:w-[50%] lg:w-[40%]"
+          >
             At INDY repair, we know that your truck is more than just a vehicle.
             It’s a hardworking partner that keeps your business moving every
             day.
-          </p>
+          </motion.p>
         </div>
         <div className="flex flex-col justify-center items-center overflow-hidden mt-16">
-          <div className="relative h-[70vw] md:h-[100%] w-[100%] pb-20 rounded-2xl overflow-hidden">
+          <motion.div
+            className="relative h-[70vw] md:h-[100%] w-[100%] pb-20 rounded-2xl overflow-hidden"
+          >
             <img
               className="w-full h-full object-cover rounded-2xl"
               src={images.home_main_img}
@@ -109,18 +132,23 @@ const Home = () => {
             <div className="absolute left-[50%] translate-x-[-50%] bottom-0">
               <RotatingBadge />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="flex flex-col gap-3 justify-center items-center">
-        <Tag text={"about our company"} />
-        <h1 className="text-4xl px-[8%] max-w-[100%] font-semibold text-center text-black leading-tight tracking-tight lg:max-w-[75%] lg:text-5xl lg:leading-[1.3]">
+        <motion.div {...fadeUp}>
+          <Tag text={"about our company"} />
+        </motion.div>
+        <motion.h1
+          className="text-4xl px-[8%] max-w-[100%] font-semibold text-center text-black leading-tight tracking-tight lg:max-w-[75%] lg:text-5xl lg:leading-[1.3]"
+          {...fadeUp}
+        >
           Transform your truck space into a sanctuary with fame & same company{" "}
           <span className="text-red">INDY</span>.
-        </h1>
+        </motion.h1>
         <div className="px-[8%] py-[5%] flex flex-col gap-6 lg:flex-row ">
           <div className="flex flex-col gap-4 w-full">
-            <div className="flex flex-col border-[1.5px] border-[#F4F4F4] p-5 rounded-xl">
+            <motion.div className="flex flex-col border-[1.5px] border-[#F4F4F4] p-5 rounded-xl" {...fadeUp}>
               <p className="text-gray-100 text-2xl py-4 mb-6">
                 "Outstanding service & unmatched efficiency! They went above and
                 beyond, arriving right on time and leaving my workspace
@@ -139,12 +167,16 @@ const Home = () => {
                 </h3>
                 <h6 className="text-sm text-gray-100">Founder</h6>
               </span>
-            </div>
+            </motion.div>
             <div className="flex flex-col gap-4 md:flex-row justify-between">
               {experience_tags.map((item, index) => (
-                <div
-                  key={index}
+                <motion.div
+                  key={item.name}
                   className={`flex w-full justify-between items-center border-[1.5px] border-[#F4F4F4] p-5 rounded-xl bg-${item.bg_col}`}
+                  initial={{ opacity: 0, y: -18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.05 }}
+                  viewport={{ once: true, amount: 0.2 }}
                 >
                   <span className="flex flex-col gap-3">
                     <h2 className={`text-4xl font-semibold text-${item.text}`}>
@@ -155,30 +187,30 @@ const Home = () => {
                   <div>
                     <img src={item.svg_img} alt="experience" />
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-          <div className="w-full rounded-xl overflow-hidden ">
+          <motion.div className="w-full rounded-xl overflow-hidden " {...fadeUp}>
             <img
               className="h-full w-full object-cover"
               src={images.exp_img_home}
               alt="home image"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="bg-black">
         <section className="p-[8%] py-[10%] lg:p-[5%] text-white flex flex-col gap-6 md:gap-12 md:flex-row">
-          <div className="flex flex-col-reverse items-center justify-end lg:flex-row lg:gap-10 ">
+          <motion.div className="flex flex-col-reverse items-center justify-end lg:flex-row lg:gap-10 " {...fadeUp}>
             <div className="hidden lg:block w-[100%] lg:h-[33vw] overflow-hidden rounded-xl"><img className="w-full h-full object-cover" src={images.about_us_img1} alt="about1" /></div>
             <div className="flex flex-col gap-6 ">
               <span><Tag text={"about us"} /></span>
               <h2 className="text-4xl leading-tight font-semibold mb-3 md:text-5xl">Our America's #1 Truck and Trailer Repair Company</h2>
               <p className="text-gray-100">At INDY repair, we recognize that your truck is more than just a vehicle. It’s your daily work partner, your road companion, and a reflection of your commitment to getting the job done.</p>
-              <span className="flex justify-start items-center"><Button variant="red" text="learn more" /></span>
+              <span className="flex justify-start items-center"><Button to="/about" variant="red" text="learn more" /></span>
             </div>
-          </div>
+          </motion.div>
           <div className="flex flex-col">
             <div className="flex justify-between items-center gap-12 p-6 border-b-[1px] border-gray-100">
               <span className="flex flex-col gap-2 ">
@@ -198,64 +230,76 @@ const Home = () => {
           </div>
         </section>
       </section>
+      <StatsSection/>
       <section className="p-[8%] py-[5%] flex flex-col gap-10 lg:flex-row">
-        <div className="flex flex-col gap-4 min-w-[40%]">
-          <div>
+        <div className="flex flex-col lg:w-[50%] md:w-full gap-4">
+          <motion.div {...fadeUp}>
             <Tag text={"our experties"} />
-          </div>
-          <h2 className="text-4xl font-semibold mb-3 md:text-5xl">
+          </motion.div>
+          <motion.h2
+            className="text-4xl font-semibold mb-3 md:text-5xl"
+            {...fadeUp}
+          >
             Full-service package
-          </h2>
-          <p className="text-gray-100 mb-3 sm:max-w-[70%] lg:max-w-[100%]">
+          </motion.h2>
+          <motion.p
+            className="text-gray-100 mb-3 sm:max-w-[70%] lg:max-w-[100%]"
+            {...fadeUp}
+          >
             At INDY repair, we understand that your truck is more than just a
             vehicle. It's your workhorse, your trusted partner on long hauls,
             and the backbone of your business operations.
-          </p>
+          </motion.p>
           <div className="flex flex-col gap-2 mb-3 lg:mb-10">
             {experties_tags.map((items, index) => (
-              <div key={index} className="flex gap-3 items-center">
+              <motion.div key={items} className="flex gap-3 items-center" {...fadeUp}>
                 <span className="border-[1px] border-[#dddddd] rounded-[100%] text-red text-2xl">
                   <IoIosCheckmark />
                 </span>{" "}
                 <span>{items}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
-          <div className="flex justify-start"><Button variant="black" text="discover more" /></div>
+          <motion.div className="flex justify-start" {...fadeUp}>
+            <Button to={"/services"} variant="black" text="discover more" />
+          </motion.div>
         </div>
-        <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        <div className="h-full grid lg:w-[60%] md:w-full grid-cols-1 md:grid-cols-2 md:grid-rows-2 auto-rows-[1fr] gap-6 ">
           {experties_cards.map((items, index) => (
-            <div
-              key={index}
-              className="group h-full flex flex-col rounded-xl overflow-hidden hover:cursor-pointer hover:shadow-[0_8px_30px_10px_rgba(0,0,0,0.03),8px_0_30px_10px_rgba(0,0,0,0.03),-8px_0_30px_10px_rgba(0,0,0,0.03)] transition-all duration-500 ease-in-out"
+            <Link key={items.slug} to={"/service/" + items.slug}>
+              <motion.div
+              className="group flex flex-col h-full min-h-[380px] rounded-xl overflow-hidden hover:cursor-pointer hover:shadow-[0_8px_30px_10px_rgba(0,0,0,0.03),8px_0_30px_10px_rgba(0,0,0,0.03),-8px_0_30px_10px_rgba(0,0,0,0.03)] transition-all duration-500 ease-in-out"
+              {...fadeUp}
             >
-              <div className="w-full max-h-[50vw] overflow-hidden">
+              <div className="w-full h-[220px] overflow-hidden">
                 <img
                   className="w-full h-full object-cover"
                   src={items.img}
                   alt="experience"
                 />
               </div>
-              <div className="flex flex-col justify-between gap-4 p-6 border-[1px] rounded-b-xl border-[#dddddd]">
-                <h3 className="capitalize text-xl font-semibold">
-                  {items.heading}
-                </h3>
-                <p className="text-gray-100 text-sm">{items.description}</p>
-                <a
+              <div className="flex flex-col justify-between flex-1 p-6 border-[1px] rounded-b-xl border-[#dddddd]">
+                <div>
+                  <h3 className="capitalize text-xl font-semibold">
+                    {items.heading}
+                  </h3>
+                  <p className="text-gray-100 text-sm">{items.description}</p>
+                </div>
+                <span
                   className="text-red md:text-gray-100 text-sm font-semibold mt-7 group-hover:text-red transition-all duration-500 ease-in-out"
-                  href=""
                 >
                   READ MORE
-                </a>
+                </span>
               </div>
-            </div>
+            </motion.div>
+            </Link>
           ))}
         </div>
       </section>
       <section className="p-[8%] py-[5%] bg-[#F5F5F5] flex flex-col gap-14">
         <HowWork />
         <div className="p-[5%] pb-[10%] lg:p-[3%] flex flex-col lg:flex-row gap-10 bg-white rounded-xl">
-          <div className="pt-[10%] lg:pt-[5%]">
+          <motion.div className="pt-[10%] lg:pt-[5%]" {...fadeUp}>
             <Tag text="why choose us" />
             <h1 className="text-4xl font-semibold my-6 leading-[1.2]">
               We are the best option for complete truck care
@@ -266,34 +310,34 @@ const Home = () => {
               business moving forward.
             </p>
             <div className="flex flex-col gap-3 items-start">
-              <span className="flex justify-start items-start gap-3">
+              <motion.span className="flex justify-start items-start gap-3" {...fadeUp}>
                 <span className="border-[1px] border-[#dddddd] rounded-[100%] text-red text-2xl">
                   <IoIosCheckmark />
                 </span>
                 <p>We handle your truck like it’s our own.</p>
-              </span>
-              <span className="flex justify-center items-center gap-3">
+              </motion.span>
+              <motion.span className="flex justify-center items-center gap-3" {...fadeUp}>
                 <span className="border-[1px] border-[#dddddd] rounded-[100%] text-red text-2xl">
                   <IoIosCheckmark />
                 </span>
                 <p>Skilled professionals ensure top performance.</p>
-              </span>
-              <span className="flex justify-center items-center gap-3">
+              </motion.span>
+              <motion.span className="flex justify-center items-center gap-3" {...fadeUp}>
                 <span className="border-[1px] border-[#dddddd] rounded-[100%] text-red text-2xl">
                   <IoIosCheckmark />
                 </span>
                 <p>Fast, thorough, and hassle-free care.</p>
-              </span>
+              </motion.span>
             </div>
-          </div>
-          <div className="w-full h-[80vw] md:h-[40vw] relative overflow-hidden rounded-xl">
+          </motion.div>
+          <motion.div className="w-full h-[80vw] md:h-[40vw] relative overflow-hidden rounded-xl" {...fadeUp}>
             <img
               className="w-full h-full object-cover"
               src={images.exp_img_home}
               alt="why choose us image"
             />{" "}
             <div className="absolute bottom-5 left-5"><Button variant="white" text="contact us" /></div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </main>

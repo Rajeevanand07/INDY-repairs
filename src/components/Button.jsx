@@ -1,5 +1,6 @@
 import React from "react";
 import { VscArrowRight } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const Button = ({
   text = "Button",
@@ -31,8 +32,8 @@ const Button = ({
 
   return (
     <div className={`flex ${className}`}>
-      <a
-        href="#"
+      <Link
+        to={props.to}
         className={`group relative flex justify-center items-center gap-3 w-full rounded-lg ${bg} px-6 py-3 font-semibold text-sm ${textColor} transition-all duration-300 ease-in-out`}
         {...props}
       >
@@ -53,7 +54,7 @@ const Button = ({
             </span>
           </span>
         )}
-      </a>
+      </Link>
     </div>
   );
 };

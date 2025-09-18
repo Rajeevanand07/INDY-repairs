@@ -23,7 +23,12 @@ const bannerData = {
       "Explore our comprehensive services designed to keep your vehicle performing at its best, ensuring reliability, safety, and peace of mind.",
     image: "/bannerSection/serviceDetail.webp",
   },
+  "/faq": {
+    heading: "FAQs",
+    description:
+      "Have questions? We’ve compiled answers to the most common inquiries about our services, processes, and how we support your vehicle’s performance and care.",
+    image: "/bannerSection/faq.webp",
+  },
 };
-
 
 export default bannerData;

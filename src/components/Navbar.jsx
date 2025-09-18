@@ -3,7 +3,7 @@ import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,30 +21,38 @@ const Navbar = () => {
             <img className="h-full w-full" src={image} alt="logo" />
           </div>
           <ul className="flex gap-14 justify-center items-center font-semibold uppercase text-sm max-lg:hidden ">
-            <Link
-              className="hover:text-red transition-all duration-500 ease-in-out"
+            <NavLink
               to="/"
+              className={({ isActive }) =>
+                `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+              }
             >
               Home
-            </Link>
-            <Link
-              className="hover:text-red transition-all duration-500 ease-in-out"
+            </NavLink>
+            <NavLink
               to="/about"
+              className={({ isActive }) =>
+                `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+              }
             >
               About
-            </Link>
-            <Link
-              className="hover:text-red transition-all duration-500 ease-in-out"
+            </NavLink>
+            <NavLink
               to="/services"
+              className={({ isActive }) =>
+                `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+              }
             >
               Services
-            </Link>
-            <Link
-              className="hover:text-red transition-all duration-500 ease-in-out"
+            </NavLink>
+            <NavLink
               to="/faq"
+              className={({ isActive }) =>
+                `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+              }
             >
               FAQ
-            </Link>
+            </NavLink>
           </ul>
         </div>
         <div className="flex gap-6 items-center max-lg:hidden">
@@ -70,36 +78,51 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex gap-7 justify-center items-center flex-col font-semibold uppercase text-2xl lg:hidden ">
-          <a
-            className="hover:text-red transition-all duration-500 ease-in-out"
-            href="#"
+          <NavLink
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+            }
           >
             Home
-          </a>
-          <a
-            className="hover:text-red transition-all duration-500 ease-in-out"
-            href="#"
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+            }
           >
             About
-          </a>
-          <a
-            className="hover:text-red transition-all duration-500 ease-in-out"
-            href="#"
+          </NavLink>
+          <NavLink
+            to="/services"
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+            }
           >
             Services
-          </a>
-          <a
-            className="hover:text-red transition-all duration-500 ease-in-out"
-            href="#"
+          </NavLink>
+          <NavLink
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+            }
           >
             Contact
-          </a>
-          <a
-            className="hover:text-red transition-all duration-500 ease-in-out"
-            href="#"
+          </NavLink>
+          <NavLink
+            to="/faq"
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `transition-all duration-500 ease-in-out hover:text-red ${isActive ? 'text-red' : ''}`
+            }
           >
             FAQ
-          </a>
+          </NavLink>
         </ul>
       </div>
     </>

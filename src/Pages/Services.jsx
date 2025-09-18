@@ -4,7 +4,15 @@ import servicesData from "../data/servicesData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HowWork from "../components/HowWork";
+import Button from "../components/Button"; // Import the Button component
 
+// Minimal, reusable fade-up animation config
+const fadeUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, ease: "easeOut" },
+  viewport: { once: true, amount: 0.01 }
+};
 
 const Services = () => {
   const [showAll, setShowAll] = useState(false);
@@ -27,7 +35,7 @@ const Services = () => {
       <BannerSection />
 
       {/* Services Grid */}
-      <section className="h-min py-8 pt-16 px-8 max-w-[1250px] w-full mx-auto">
+      <motion.section className="h-min py-8 pt-16 px-8 max-w-[1250px] w-full mx-auto" {...fadeUp}>
         <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(3,minmax(50px,1fr))] w-full">
           {displayedServices.map((service, index) => (
             <motion.div
@@ -66,32 +74,32 @@ const Services = () => {
         {/* Load More / Show Less Button */}
         {servicesData.length > 6 && (
           <div className="flex justify-center mt-10">
-            <button
+            <Button 
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-3 bg-[#e81c2e] text-white rounded-lg font-inter font-semibold hover:bg-[#c71a26] transition-colors"
-            >
-              {showAll ? "Show Less" : "Load More"}
-            </button>
+              variant="red"
+              text={showAll ? "Show Less" : "Load More"}
+              className="px-6 py-3 transition-colors"
+            />
           </div>
         )}
-      </section>
+      </motion.section>
 
       {/* How it works Section */}
-      <section className="py-28 my-24 mb-8 bg-[#F5F5F5]">
+      <motion.section className="py-28 my-24 mb-8 bg-[#F5F5F5]" {...fadeUp}>
         <HowWork />
-      </section>
+      </motion.section>
 
       {/* Scrolling Effect */}
-      <section className="overflow-hidden w-full py-2 mb-24">
+      <motion.section className="overflow-hidden w-full py-2 mb-24" {...fadeUp}>
         <div
           className="w-full p-2"
           style={{
             WebkitMaskImage:
-              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)",
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
             WebkitMaskRepeat: "no-repeat",
             WebkitMaskSize: "100% 100%",
             maskImage:
-              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)",
+              "linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
             maskRepeat: "no-repeat",
             maskSize: "100% 100%",
           }}
@@ -110,15 +118,15 @@ const Services = () => {
             {quotes.map((quote, idx) => (
               <li
                 key={idx}
-                className=" font-inter font-semibold     text-[64px] sm:text-[96px] md:text-[128px] 
-                leading-[64px] sm:leading-[96px] md:leading-[128px]  text-[#222222]"
+                className=" font-inter font-semibold text-[64px] sm:text-[96px] md:text-[128px] 
+                leading-[64px] sm:leading-[96px] md:leading-[128px] text-[#222222]"
               >
                 {quote}
               </li>
             ))}
           </motion.ul>
         </div>
-      </section>
+      </motion.section>
 
     </>
   );

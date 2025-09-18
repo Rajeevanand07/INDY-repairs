@@ -2,11 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* This creates your red gradient. The hex codes match Tailwind's red-500 and red-600 */
-  --red-gradient: linear-gradient(to bottom right, #EF4444, #DC2626);
-  
-  /* ... your other CSS variables can go here ... */
-  --color-red: #some-red-value;
-  --color-black: #some-black-value;
-}
