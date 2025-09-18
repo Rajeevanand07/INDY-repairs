@@ -6,7 +6,8 @@ import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
-<<<<<<< HEAD
+import ContactUs from './pages/ContactUs'
+import FAQ from './pages/FAQ'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 
@@ -39,11 +40,6 @@ const ScrollToTop = () => {
   return null;
 };
 
-=======
-import { Routes, Route } from 'react-router-dom'
-import ContactUs from './Pages/ContactUs'
-import FAQ from './Pages/FAQ'
->>>>>>> vivek
 const App = () => {
   return (
     <>
