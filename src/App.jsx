@@ -7,6 +7,8 @@ import NotFound from './pages/NotFound'
 import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
 import { Routes, Route } from 'react-router-dom'
+import ContactUs from './Pages/ContactUs'
+import FAQ from './Pages/FAQ'
 const App = () => {
   return (
     <>
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/service/:slug" element={<ServiceDetail />} />
+        <Route path="/contact" element={<ContactUs/>} />
+        <Route path="/faq" element={<FAQ/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
