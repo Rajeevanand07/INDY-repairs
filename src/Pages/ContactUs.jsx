@@ -3,6 +3,7 @@ import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
 import ContactForm from '../components/ContactForm';
 import { toast } from 'react-toastify';
 import BannerSection from '../components/BannerSection';
+import Tag from '../components/Tag';
 
 const ContactUs = () => {
   const handlePhoneClick = (e) => {
@@ -44,11 +45,9 @@ const ContactUs = () => {
             md:absolute md:top-[20%] md:right-28 z-10 
           "
         >
-          <h2 className="font-inter font-semibold text-[26px] md:text-[36px] leading-[46px] text-[#222222] mb-12 text-start">
-            Get a free <span className="text-[#E6302F]">inspection</span> anyway here...
-          </h2>
+          <div className="pb-5"><Tag text="Get inspection" /></div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 mt-[20px]">
             {/* Phone */}
             <a
               href="tel:+13173130713"

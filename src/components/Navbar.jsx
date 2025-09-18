@@ -56,9 +56,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-6 items-center max-lg:hidden">
-          <span className="whitespace-nowrap text-red font-semibold cursor-pointer hover:text-black transition-all duration-500 ease-in-out">
+          <a href="tel:+13177715095" aria-label="Call 317-771-5095" className="whitespace-nowrap text-red font-semibold cursor-pointer hover:text-black transition-all duration-500 ease-in-out">
             317-771-5095
-          </span>
+          </a>
           <Button to="/contact" variant="black" text={"contact us"} />
         </div>
         <div

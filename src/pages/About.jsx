@@ -91,7 +91,7 @@ export default function About() {
                 </p>
               </div>
               <div className="w-full flex justify-center md:justify-start">
-                <Button text="Learn More" />
+                <Button to="/" text="Learn More" />
               </div>
             </motion.div>
           </motion.div>
@@ -144,7 +144,7 @@ export default function About() {
           <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
             Our team of certified professionals is dedicated to providing the highest quality service. We are passionate about what we do and committed to your satisfaction.
           </p>
-          <Button text="Join with us" />
+          <Button to="/contact" text="Join with us" />
         </motion.div>
 
         {/* Right Block: Team Cards (Larger and positioned below/right on Desktop) */}

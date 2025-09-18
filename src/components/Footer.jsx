@@ -9,6 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
 import { IoMdTime } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const social = [
   <FaXTwitter/>,
@@ -17,21 +18,21 @@ const social = [
   <FaLinkedinIn/>,
 ]
 const links = [
-  "Home",
-  "About",
-  "Services",
-  "Contact",
+  { name: "Home", redirect: "/" },
+  { name: "About", redirect: "/about" },
+  { name: "Services", redirect: "/services" },
+  { name: "Contact", redirect: "/contact" },
 ]
 const full_truck_inspection = [
-  "Transmission change",
-  "Truck trailer bushing",
-  "Engine oil change",
-  "Steel and Aluminium welding",
-  "Air compressor",
+  { name: "Transmission change", redirect: "/service/transmission-change" },
+  { name: "Truck trailer bushing", redirect: "/service/truck-trailer-bushing-replacement" },
+  { name: "Full Vehicle Inspection", redirect: "/service/full-vehicle-inspection" },
+  { name: "Steel and Aluminium welding", redirect: "/service/steel-aluminium-welding" },
+  { name: "Air compressor", redirect: "/service/air-compressor-repair" },
 ]
 const questions = [
-  { icon: <FaPhoneAlt/>, que: "317-771-5095" },
-  { icon: <MdMailOutline/>, que: "INDYREPAIRSHOP@YAHOO.COM" },
+  { icon: <FaPhoneAlt/>, que: "317-771-5095", href: "tel:+13177715095" },
+  { icon: <MdMailOutline/>, que: "indyrepairshop@yahoo.com", href: "mailto:indyrepairshop@yahoo.com" },
   { icon: <IoMdTime/>, que: "Weekdays 10:00 am - 9:00 pm (EST)" },
 ]
 
@@ -53,7 +54,7 @@ const Footer = () => {
               />
             </div>
             <div className="w-full sm:w-auto">
-              <Button text="Subscribe" variant="red" arrow={true} className="w-full" />
+              <Button text="Subscribe" to="/contact" variant="red" arrow={true} className="w-full" />
             </div>
           </div>
         </form>
@@ -79,7 +80,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold whitespace-nowrap">Useful Links</h3>
             <ul>
               {links.map((item, index) => (
-                <li className="mb-2 hover:text-white transition-all duration-300 ease-in-out" key={index}> <a href="#">{item}</a></li>
+                <li className="mb-2 hover:text-white transition-all duration-300 ease-in-out" key={index}> <Link to={item.redirect}>{item.name}</Link></li>
               ))}
             </ul>
           </div>
@@ -87,7 +88,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Full Truck Inspection</h3>
             <ul>
               {full_truck_inspection.map((item, index) => (
-                <li className="mb-2 hover:text-white transition-all duration-300 ease-in-out" key={index}> <a href="#">{item}</a></li>
+                <li className="mb-2 hover:text-white transition-all duration-300 ease-in-out" key={index}> <Link to={item.redirect}>{item.name}</Link></li>
               ))}
             </ul>
           </div>
@@ -96,8 +97,17 @@ const Footer = () => {
             <ul>
               {questions.map((item, index) => (
                 <li className="mb-2 flex gap-2 items-center hover:text-white transition-all duration-300 ease-in-out" key={index}>
-                  <a href="#">{item.icon}</a>
-                  <a href="#">{item.que}</a>
+                  {item.href ? (
+                    <>
+                      <a href={item.href} aria-label={item.que}>{item.icon}</a>
+                      <a href={item.href}>{item.que}</a>
+                    </>
+                  ) : (
+                    <>
+                      <span aria-hidden>{item.icon}</span>
+                      <span>{item.que}</span>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>

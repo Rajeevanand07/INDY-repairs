@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { VscArrowRight } from "react-icons/vsc";
 import { toast } from "react-toastify";
 import { FaPhoneAlt } from "react-icons/fa";
+import Tag from "./Tag";
 
 const ContactForm = () => {
   const form = useRef();
@@ -95,11 +96,7 @@ const ContactForm = () => {
         {/* Section 1: Form */}
         <div className="w-full xl:w-1/2 bg-[#F5F5F5] p-4 sm:p-6 xl:p-12 rounded-lg shadow-md flex flex-col justify-between">
           {/* Header Badge */}
-          <div className="bg-red-200 text-black rounded mb-2">
-            <span className="border border-red p-2 rounded-full font-semibold text-[12px] uppercase">
-              Get a Free Inspection
-            </span>
-          </div>
+          <div><Tag text="Get inspection" /></div>
 
           {/* Heading */}
           <p className="font-inter font-semibold text-[48px] leading-[58px] text-[#222222] mt-8 mb-12">
