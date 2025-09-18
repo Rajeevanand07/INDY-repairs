@@ -1,15 +1,16 @@
 import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import About from './pages/About'
-import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
-import ContactUs from './pages/ContactUs'
 import FAQ from './pages/FAQ'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import Home2 from './pages/Home2'
+import About2 from './pages/About2'
+import Contact from './pages/Contact'
+
 
 
 // Scroll to top on route change
@@ -46,11 +47,11 @@ const App = () => {
       <Navbar/>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Home2 />} />
+        <Route path="/about" element={<About2 />} />
         <Route path="/services" element={<Services />} />
         <Route path="/service/:slug" element={<ServiceDetail />} />
-        <Route path="/contact" element={<ContactUs/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="/faq" element={<FAQ/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>

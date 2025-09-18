@@ -59,37 +59,9 @@ const experties_tags = [
   "Eco-Friendly Solutions",
 ];
 
-//   {
-//     img: "/services/inspection.webp",
-//     heading: "Full Vehicle Inspection",
-//     slug:"full-vehicle-inspection",
-//     description:
-//       "Comprehensive inspection of your truck to detect issues early and ensure reliability.",
-//   },
-//   {
-//     img: "/services/diagnostics.webp",
-//     heading: "Engine Diagnostics",
-//     slug:"engine-diagnostics",
-//     description:
-//       "Advanced diagnostics to detect and resolve hidden engine performance issues.",
-//   },
-//   {
-//     img: "/services/compressor.webp",
-//     heading: "air compressor",
-//     slug:"air-compressor-repair",
-//     description:
-//       "Essential air compressor maintenance for brakes, suspension, and accessories.",
-//   },
-//   {
-//     img: "/services/transmission.webp",
-//     heading: "transmission change ",
-//     slug:"transmission-change",
-//     description:
-//       "Heavy-duty transmission service and replacement for smooth gear shifting.",
-//   },
-// ];
 
-const Home = () => {
+
+const Home2 = () => {
   return (
     <main>
       <section className="flex flex-col py-[8%] px-[8%] gap-3 lg:gap-6 ">
@@ -346,4 +318,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home2;

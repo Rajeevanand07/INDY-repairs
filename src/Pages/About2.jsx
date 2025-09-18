@@ -13,7 +13,7 @@ const fadeUp = {
   viewport: { once: true, amount: 0.01 }
 };
 
-export default function About() {
+export default function About2() {
   const timeline = [
     {
       year: "2009",
