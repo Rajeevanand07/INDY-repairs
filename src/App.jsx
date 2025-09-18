@@ -10,6 +10,8 @@ import ServiceDetails from './pages/ServiceDetails'
 import Contact from './pages/Contact'
 import FAQs from './pages/FAQs'
 import NotFound2 from './pages/NotFound2'
+import About2 from './pages/About2'
+
 
 
 
