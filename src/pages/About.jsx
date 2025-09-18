@@ -16,30 +16,32 @@ const fadeUp = {
 export default function About() {
   const timeline = [
     {
-      year: "1990",
-      title: "Journey was started",
-      desc: "With a commitment to reliability and customer satisfaction, we use high-quality parts.",
+      year: "2009",
+      title: "Started Truck Repairs",
+      desc: "We began providing reliable truck repair services for all vehicle types.",
       bg: "bg-white text-[#E81C2E]",
     },
     {
-      year: "1990",
-      title: "Journey was started",
-      desc: "With a commitment to reliability and customer satisfaction, we use high-quality parts.",
+      year: "2014",
+      title: "Service Expansion",
+      desc: "Opened new centers to serve more truck owners with quality repairs.",
       bg: "bg-[#E81C2E] text-white",
     },
     {
-      year: "1990",
-      title: "Journey was started",
-      desc: "With a commitment to reliability and customer satisfaction, we use high-quality parts.",
+      year: "2018",
+      title: "Tech Upgrades",
+      desc: "Adopted modern tools and techniques for faster, more accurate truck repairs.",
       bg: "bg-black text-white",
     },
     {
-      year: "1990",
-      title: "Journey was started",
-      desc: "With a commitment to reliability and customer satisfaction, we use high-quality parts.",
+      year: "2024",
+      title: "15 Years Strong",
+      desc: "Celebrating fifteen years of trusted service with reliability and customer satisfaction.",
       bg: "bg-white text-[#E81C2E]",
     },
   ];
+  
+  
 
   return (
     <>

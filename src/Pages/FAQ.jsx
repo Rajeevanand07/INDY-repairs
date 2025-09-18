@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
 import { faqData } from "../data/faqData"; // Import the FAQ data
+import BannerSection from "../components/BannerSection";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,6 +13,8 @@ const FAQ = () => {
   };
 
   return (
+    <>
+    <BannerSection/>
     <section className="flex flex-col items-center justify-center py-12 px-6">
       {/* === FAQ Section === */}
       <motion.div
@@ -152,6 +155,7 @@ const FAQ = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

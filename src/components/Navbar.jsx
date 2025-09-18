@@ -57,9 +57,9 @@ const Navbar = () => {
         </div>
         <div className="flex gap-6 items-center max-lg:hidden">
           <span className="whitespace-nowrap text-red font-semibold cursor-pointer hover:text-black transition-all duration-500 ease-in-out">
-            +1 (317) 313-0713
+            317-771-5095
           </span>
-          <Button variant="black" text={"contact us"} />
+          <Button to="/contact" variant="black" text={"contact us"} />
         </div>
         <div
           className="lg:hidden relative z-[9]"

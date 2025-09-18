@@ -30,7 +30,7 @@ const full_truck_inspection = [
   "Air compressor",
 ]
 const questions = [
-  { icon: <FaPhoneAlt/>, que: "+1 (317) 313-0713" },
+  { icon: <FaPhoneAlt/>, que: "317-771-5095" },
   { icon: <MdMailOutline/>, que: "INDYREPAIRSHOP@YAHOO.COM" },
   { icon: <IoMdTime/>, que: "Weekdays 10:00 am - 9:00 pm (EST)" },
 ]

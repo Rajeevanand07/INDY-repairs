@@ -2,6 +2,7 @@ import React from 'react';
 import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
 import ContactForm from '../components/ContactForm';
 import { toast } from 'react-toastify';
+import BannerSection from '../components/BannerSection';
 
 const ContactUs = () => {
   const handlePhoneClick = (e) => {
@@ -15,6 +16,7 @@ const ContactUs = () => {
 
   return (
     <>
+    <BannerSection/>
     <div className="w-full">
       {/* Wrapper that changes layout based on screen size */}
       <div className="flex flex-col w-full relative">
@@ -64,7 +66,7 @@ const ContactUs = () => {
               <div className='flex items-start gap-3 flex-col'>
                 <p className="font-inter font-medium text-[12px] leading-[12px] text-[#555454] uppercase">Phone Number</p>
                 <span className="font-inter font-semibold text-[16px] leading-[22px] transition-colors duration-200 group-hover:text-[#E81C2E]">
-                  +1 (317) 313-0713
+                317-771-5095
                 </span>
               </div>
             </a>

@@ -7,6 +7,7 @@ import HowWork from "../components/HowWork";
 import { motion } from "framer-motion";
 import StatsSection from "../components/StateSection";
 import { Link } from "react-router-dom";
+import servicesData from "../data/servicesData";
 
 // Import all images from the public/home directory
 const images = {
@@ -57,36 +58,35 @@ const experties_tags = [
   "Eco-Friendly Solutions",
 ];
 
-const experties_cards = [
-  {
-    img: "/services/inspection.webp",
-    heading: "Full Vehicle Inspection",
-    slug:"full-vehicle-inspection",
-    description:
-      "Comprehensive inspection of your truck to detect issues early and ensure reliability.",
-  },
-  {
-    img: "/services/diagnostics.webp",
-    heading: "Engine Diagnostics",
-    slug:"engine-diagnostics",
-    description:
-      "Advanced diagnostics to detect and resolve hidden engine performance issues.",
-  },
-  {
-    img: "/services/compressor.webp",
-    heading: "air compressor",
-    slug:"air-compressor-repair",
-    description:
-      "Essential air compressor maintenance for brakes, suspension, and accessories.",
-  },
-  {
-    img: "/services/transmission.webp",
-    heading: "transmission change ",
-    slug:"transmission-change",
-    description:
-      "Heavy-duty transmission service and replacement for smooth gear shifting.",
-  },
-];
+//   {
+//     img: "/services/inspection.webp",
+//     heading: "Full Vehicle Inspection",
+//     slug:"full-vehicle-inspection",
+//     description:
+//       "Comprehensive inspection of your truck to detect issues early and ensure reliability.",
+//   },
+//   {
+//     img: "/services/diagnostics.webp",
+//     heading: "Engine Diagnostics",
+//     slug:"engine-diagnostics",
+//     description:
+//       "Advanced diagnostics to detect and resolve hidden engine performance issues.",
+//   },
+//   {
+//     img: "/services/compressor.webp",
+//     heading: "air compressor",
+//     slug:"air-compressor-repair",
+//     description:
+//       "Essential air compressor maintenance for brakes, suspension, and accessories.",
+//   },
+//   {
+//     img: "/services/transmission.webp",
+//     heading: "transmission change ",
+//     slug:"transmission-change",
+//     description:
+//       "Heavy-duty transmission service and replacement for smooth gear shifting.",
+//   },
+// ];
 
 const Home = () => {
   return (
@@ -264,35 +264,36 @@ const Home = () => {
             <Button to={"/services"} variant="black" text="discover more" />
           </motion.div>
         </div>
-        <div className="h-full grid lg:w-[60%] md:w-full grid-cols-1 md:grid-cols-2 md:grid-rows-2 auto-rows-[1fr] gap-6 ">
-          {experties_cards.map((items, index) => (
-            <Link key={items.slug} to={"/service/" + items.slug}>
-              <motion.div
-              className="group flex flex-col h-full min-h-[380px] rounded-xl overflow-hidden hover:cursor-pointer hover:shadow-[0_8px_30px_10px_rgba(0,0,0,0.03),8px_0_30px_10px_rgba(0,0,0,0.03),-8px_0_30px_10px_rgba(0,0,0,0.03)] transition-all duration-500 ease-in-out"
+        <div className="h-full grid lg:w-[70%] md:w-full grid-cols-1 md:grid-cols-2 md:grid-rows-2 auto-rows-[1fr] gap-6 ">
+          {servicesData.slice(0, 4).map((service, index) => (
+            <motion.div
+              key={service.id}
               {...fadeUp}
+              className="group bg-white rounded-[10px] border border-gray-200 shadow-none hover:shadow-xl transition-shadow duration-300 flex flex-col"
             >
-              <div className="w-full h-[220px] overflow-hidden">
-                <img
-                  className="w-full h-full object-cover"
-                  src={items.img}
-                  alt="experience"
-                />
-              </div>
-              <div className="flex flex-col justify-between flex-1 p-6 border-[1px] rounded-b-xl border-[#dddddd]">
-                <div>
-                  <h3 className="capitalize text-xl font-semibold">
-                    {items.heading}
-                  </h3>
-                  <p className="text-gray-100 text-sm">{items.description}</p>
+              <Link to={`/service/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="flex flex-col h-full">
+                <div className="w-full h-[220px] overflow-hidden rounded-t-[10px]">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <span
-                  className="text-red md:text-gray-100 text-sm font-semibold mt-7 group-hover:text-red transition-all duration-500 ease-in-out"
-                >
-                  READ MORE
-                </span>
-              </div>
+                <div className="flex flex-col justify-between flex-grow p-7">
+                  <div className="flex flex-col gap-4">
+                    <h3 className="font-inter font-semibold text-[20px] leading-6 text-[#222222]">
+                      {service.title}
+                    </h3>
+                    <p className="font-inter text-[14px] leading-6 text-[#666]">
+                      {service.shortDescription}
+                    </p>
+                  </div>
+                  <p className="mt-6 font-inter font-semibold text-[14px] leading-[14px] uppercase text-[#aca9a9] group-hover:text-[#e81c2e] transition-colors duration-300">
+                    Read More
+                  </p>
+                </div>
+              </Link>
             </motion.div>
-            </Link>
           ))}
         </div>
       </section>
@@ -336,7 +337,7 @@ const Home = () => {
               src={images.exp_img_home}
               alt="why choose us image"
             />{" "}
-            <div className="absolute bottom-5 left-5"><Button variant="white" text="contact us" /></div>
+            <div className="absolute bottom-5 left-5"><Button to="/contact" variant="white" text="contact us" /></div>
           </motion.div>
         </div>
       </section>
