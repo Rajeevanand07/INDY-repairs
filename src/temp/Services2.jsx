@@ -6,6 +6,7 @@ import HowWork from "../components/HowWork";
 import Button from "../components/Button"; // Import the Button component
 import BannerSection from "../components/BannerSection";
 
+// page name change
 // Minimal, reusable fade-up animation config
 const fadeUp = {
   initial: { opacity: 0, y: 50 },
