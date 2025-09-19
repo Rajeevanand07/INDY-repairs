@@ -15,9 +15,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="px-[8%] py-6 flex justify-between items-center font-sans">
+      <nav className=" px-[8%] py-6 flex justify-between items-center font-sans">
         <div className="flex gap-14 items-center">
-          <div className="w-[10rem] object-cover relative z-9">
+          <div className="w-[10rem] object-cover relative z-10">
             <img className="h-full w-full" src={image} alt="logo" />
           </div>
           <ul className="flex gap-14 justify-center items-center font-semibold uppercase text-sm max-lg:hidden ">
@@ -56,7 +56,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-6 items-center max-lg:hidden">
-          <a href="tel:+13177715095" aria-label="Call 317-771-5095" className="whitespace-nowrap text-red font-semibold cursor-pointer hover:text-black transition-all duration-500 ease-in-out">
+          <a href="tel:+13177715095" aria-label="Call +13177715095" className="whitespace-nowrap text-red font-semibold cursor-pointer hover:text-black transition-all duration-500 ease-in-out">
             317-771-5095
           </a>
           <Button to="/contact" variant="black" text={"contact us"} />
@@ -73,7 +73,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className={`lg:hidden h-[100vh] w-[50vw] fixed top-0 right-0 border-2 z-[8] flex justify-center items-center flex-col gap-10 transition-all duration-500 ease-in-out bg-white ${
+        className={`lg:hidden h-[100vh] w-[100vw] md:w-[50vw] fixed top-0 right-0 z-[8] flex justify-center items-center flex-col gap-10 transition-all duration-500 ease-in-out bg-white ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

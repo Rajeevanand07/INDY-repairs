@@ -10,7 +10,7 @@ const Contact = () => {
     if (!/Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent)) {
       e.preventDefault();
       toast.info(
-        'Calling is not supported on this device. Please use a mobile phone to call +1 (317) 313-0713.'
+        'Calling is not supported on this device. Please use a mobile phone to call +1 (317) 771-5095.'
       );
     }
   };
@@ -50,7 +50,8 @@ const Contact = () => {
           <div className="space-y-8 mt-[20px]">
             {/* Phone */}
             <a
-              href="tel:+13173130713"
+              href="tel:+13177715095"
+              aria-label="Call +13177715095"
               onClick={handlePhoneClick}
               className="flex items-center group cursor-pointer"
             >
@@ -65,7 +66,7 @@ const Contact = () => {
               <div className='flex items-start gap-3 flex-col'>
                 <p className="font-inter font-medium text-[12px] leading-[12px] text-[#555454] uppercase">Phone Number</p>
                 <span className="font-inter font-semibold text-[16px] leading-[22px] transition-colors duration-200 group-hover:text-[#E81C2E]">
-                317-771-5095
+                  317-771-5095
                 </span>
               </div>
             </a>
@@ -87,9 +88,9 @@ const Contact = () => {
               </div>
               <div className='flex items-start gap-3 flex-col'>
                 <p className="font-inter font-medium text-[12px] leading-[12px] text-[#555454] uppercase">Office Address</p>
-                <span className="font-inter font-semibold text-[16px] leading-[22px] transition-colors duration-200 group-hover:text-[#E81C2E]">
+                <a href="https://www.google.com/maps/search/?api=1&query=2965%20Heirloom%20Lane%2C%20Greenwood%2C%20IN%2046143" target="_blank" rel="noopener noreferrer" className="font-inter font-semibold text-[16px] leading-[22px] transition-colors duration-200 group-hover:text-[#E81C2E]">
                   2965 Heirloom Lane, Greenwood, IN 46143
-                </span>
+                </a>
               </div>
             </a>
 

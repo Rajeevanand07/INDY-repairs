@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import StatsSection from "../components/StateSection";
 import { Link } from "react-router-dom";
 import servicesData from "../data/servicesData";
+import { IoIosCall } from "react-icons/io";
 
 // Import all images from the public/home directory
 const images = {
@@ -63,7 +64,7 @@ const experties_tags = [
 
 const Home2 = () => {
   return (
-    <main>
+    <main className="relative">
       <section className="flex flex-col py-[8%] px-[8%] gap-3 lg:gap-6 ">
         <div className="flex flex-col gap-6 md:flex-row-reverse justify-end items-start md:items-center lg:gap-10">
           <span>
@@ -314,6 +315,7 @@ const Home2 = () => {
           </motion.div>
         </div>
       </section>
+      <a href="tel:+13177715095" aria-label="Call +13177715095" className="fixed bottom-10 right-5 lg:hidden w-16 h-16 bg-red-gradient rounded-full inline-flex justify-center items-center text-4xl text-white shadow-[0_16px_48px_rgba(0,0,0,0.6)] hover:shadow-[0_22px_64px_rgba(0,0,0,0.7)] filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-shadow duration-300 cursor-pointer z-50"><IoIosCall/></a>
     </main>
   );
 };
