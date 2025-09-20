@@ -39,6 +39,22 @@ const questions = [
 const Footer = () => {
   return (
     <footer className="bg-black pt-[8%] px-[8%] text-gray-100 overflow-y-hidden">
+      <style>{`
+        @keyframes shiny-sweep {
+          0% { background-position: 200% center; }
+          100% { background-position: -200% center; }
+        }
+        .shiny-text {
+          background: linear-gradient(90deg, #CDAF72 0%, #FFF7D6 20%, #D4AF37 40%, #FFF7D6 60%, #CDAF72 80%);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: shiny-sweep 3s linear infinite;
+          text-shadow: 0 0 8px rgba(255, 234, 138, 0.25);
+          white-space: nowrap;
+        }
+      `}</style>
       <div className="mb-20 flex flex-col justify-between items-start gap-[3rem] lg:flex-row lg:items-center">
         <h1 className="text-4xl md:text-5xl font-semibold text-white2 tracking-tight text-left max-w-2xl">
           Get every single updates weekly from us.
@@ -116,7 +132,9 @@ const Footer = () => {
       </div>
       <div className="relative">
         <div className="border-t-[1.3px] border-[#2D2D2D] flex justify-center text-center p-5 text-white2 text-md">
-          <p>Copyright & design by @Alchemy Studios - 2025</p>
+          <a href="tel:+91 9988084973" className="hover:text-white transition-colors" aria-label="Call us">
+            Copyright & design by <span className="shiny-text">@Alchemy Studios</span> - 2025
+          </a>
         </div>
       </div>
     </footer>
