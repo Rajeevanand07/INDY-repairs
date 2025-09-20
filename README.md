@@ -3,7 +3,7 @@
 # 🛠️ INDY Truck & Trailer Repair – Service Website
 
 **Client Project | Freelance Work (USA)**
-🌐 **Live Site:** [https://indyrepair.com](https://indy-repairs.vercel.app) *(replace with actual link if available)*
+🌐 **Live Site:** [https://indyrepair.com](https://indy-repairs.vercel.app)
 
 I had the opportunity to work as a **Frontend Developer & Designer** on this project for **INDY Truck & Trailer Repair**, a professional truck and trailer repair company based in the USA. The website was designed to highlight the **wide range of services** offered by the business, making it easy for truckers and fleet owners to explore solutions, request assistance, and get in touch quickly.
 
