@@ -133,7 +133,7 @@ const Footer = () => {
       <div className="relative">
         <div className="border-t-[1.3px] border-[#2D2D2D] flex justify-center text-center p-5 text-white2 text-md">
           <a href="tel:+91 9988084973" className="hover:text-white transition-colors" aria-label="Call us">
-            Copyright & design by <span className="shiny-text">@Alchemy Studios</span> - 2025
+            Copyright & design by <span className="shiny-text">Alchemy Studios</span> - 2025
           </a>
         </div>
       </div>
