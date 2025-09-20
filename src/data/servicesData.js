@@ -4,7 +4,7 @@ const servicesData = [
     title: "Full Vehicle Inspection",
     shortDescription:
       "Comprehensive inspection of your truck to detect issues early and ensure reliability.",
-    image: "/services/inspection.webp",
+    image: "/services/inspection.avif",
     longDescription:
       "Our Full Vehicle Inspection is a detailed, multi-point diagnostic service designed for heavy-duty trucks and trailers to ensure peak performance and safety. Our certified technicians meticulously examine every major system, including the engine, transmission, brakes, suspension, electrical components, exhaust, and safety features. Using advanced diagnostic tools and adhering to Department of Transportation (DOT) standards, we identify potential issues before they lead to costly repairs or unexpected downtime. This service provides a comprehensive report with actionable insights, ensuring your vehicle remains road-ready, compliant with regulations, and capable of handling the demands of long-haul or heavy-duty operations. Perfect for fleet managers or owner-operators, our inspections minimize risks and maximize vehicle longevity.",
     otherImages: [

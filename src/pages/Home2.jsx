@@ -21,7 +21,7 @@ const images = {
   exp_2: "/home/exp_2.jpg",
   exp_3: "/home/exp_3.jpg",
   exp_4: "/home/exp_4.jpg",
-  about_us_img1: "/home/about_us_img1.jpg",
+  about_us_img1: "/home/about_us_img1.webp",
   about_us_img2: "/home/about_us_img2.jpg",
   aim: "/home/aim.svg",
   rocket: "/home/rocket.svg",
