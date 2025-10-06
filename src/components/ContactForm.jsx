@@ -51,32 +51,32 @@ const ContactForm = () => {
     setLoading(true);
 
     console.log("Submit button clicked!");
-    const formData = new FormData(form.current);
-    for (let [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
+    // const formData = new FormData(form.current);
+    // for (let [key, value] of formData.entries()) {
+    //   console.log(key, value);
+    // }
 
     // Send email to owner
     emailjs
       .sendForm(
-        "service_siyjdnl", // Your EmailJS service ID
-        "template_34scfti", // Owner template
+        "service_4q40sk4", // Your EmailJS service ID
+        "template_9tcgpsk", // Owner template
         form.current,
-        "ZDkWPAjSrWIqpn3Ui" // Your public key
+        "Sf8eGfaeLcd_8TYOd" // Your public key
       )
       .then((response) => {
-        console.log("Email sent to owner successfully!", response);
+        // console.log("Email sent to owner successfully!", response);
 
         // Send confirmation email to user
         return emailjs.sendForm(
-          "service_siyjdnl",
-          "template_f644ogt", // User confirmation template
+          "service_4q40sk4",
+          "template_t9bd8d9", // User confirmation template
           form.current,
-          "ZDkWPAjSrWIqpn3Ui"
+          "Sf8eGfaeLcd_8TYOd"
         );
       })
       .then((res) => {
-        console.log("Confirmation email sent!", res);
+        // console.log("Confirmation email sent!", res);
         toast.success("Your query has been submitted successfully!");
         form.current.reset(); // Reset form after success
       })
